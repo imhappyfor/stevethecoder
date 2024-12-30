@@ -6,14 +6,13 @@ import { FaReact, FaNodeJs, FaPython, FaDatabase, FaPhp, FaVuejs} from 'react-ic
 import dynamic from 'next/dynamic'
 import { SiTypescript, SiJavascript , SiAwslambda} from "react-icons/si";
 import useSound from 'use-sound';
-import PartyHorn from '@/assets/sfx/PartyHorn.mp3';
 
 
 
 const Confetti = dynamic(() => import('react-confetti'), { ssr: false })
 
 export default function Skills() {
-  const [play] = useSound(PartyHorn);
+  const [play] = useSound('/sfx/PartyHorn.mp3');
   const [showConfetti, setShowConfetti] = useState(false)
 
   const skills = [
