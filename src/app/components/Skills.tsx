@@ -40,7 +40,7 @@ export default function Skills() {
   }
 
   return (
-    <section className="h-full flex items-center justify-center bg-yellow-100 p-8 relative overflow-hidden">
+    <section className="h-full flex items-center justify-center bg-yellow-100 p-8 relative ">
       {showConfetti && (
         <Confetti
           width={typeof window !== 'undefined' ? window.innerWidth : 300}

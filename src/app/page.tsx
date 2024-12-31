@@ -14,9 +14,14 @@ export default function Home() {
   const [currentSection, setCurrentSection] = useState('hero')
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-yellow-100 text-gray-800 relative font-mono">
+    <div className="h-screen w-screen bg-yellow-100 text-gray-800 relative font-mono">
       <Header />
-      <Navigation currentSection={currentSection} setCurrentSection={setCurrentSection} />
+      <div className="pt-16">
+        <Navigation 
+          currentSection={currentSection} 
+          setCurrentSection={setCurrentSection}
+        />
+      </div>
       <AnimatePresence mode="wait">
         <motion.div
           key={currentSection}
@@ -24,7 +29,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
           transition={{ duration: 0.3 }}
-          className="h-full w-full pt-16"
+          className="md:h-full w-full lg:pt-16 pt-4  "
         >
           {currentSection === 'hero' && <Hero />}
           {currentSection === 'about' && <About />}

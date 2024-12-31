@@ -20,22 +20,22 @@ export default function About() {
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-8 bg-purple-500 text-white px-6 py-3 rounded-lg border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+          className="text-3xl md:text-4xl font-bold text-center mb-8 bg-purple-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
         >
           About Me
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {items.map((item, index) => (
             <motion.div
               key={item.title}
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-lg border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
+              className="bg-white p-4 md:p-6 rounded-lg border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]"
             >
               <item.icon className="text-4xl text-blue-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p>{item.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">{item.title}</h3>
+              <p className="text-sm md:text-base">{item.description}</p>
             </motion.div>
           ))}
         </div>

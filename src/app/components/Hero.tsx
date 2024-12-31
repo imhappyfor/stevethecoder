@@ -49,7 +49,7 @@ export default function Hero() {
   }, [badgeControls])
 
   return (
-    <section className="h-full flex items-center justify-center bg-yellow-100 relative">
+    <section className="h-full flex items-center justify-center bg-yellow-100 relative p-8">
       <div className="text-center">
         <motion.h1
           initial={{ y: -50, opacity: 0 }}
@@ -77,6 +77,7 @@ export default function Hero() {
   <span className="bg-white text-black drop-shadow-[1px_1px_1px_rgba(0,0,0,0.8)]">SELF TAUGHT</span>
   </span>
           </motion.div>
+
         </motion.h1>
 
         <motion.p
